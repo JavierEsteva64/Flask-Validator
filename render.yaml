@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: script-validator
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
